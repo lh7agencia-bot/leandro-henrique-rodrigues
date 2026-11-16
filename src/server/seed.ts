@@ -1,0 +1,198 @@
+import type {
+  Booking,
+  ContactMessage,
+  FaqItem,
+  GalleryPhoto,
+  MenuItem,
+  Testimonial,
+} from '../types.ts';
+
+export const REAL_ESTABLISHMENT_PHOTOS = [
+  {
+    url: 'https://lh3.googleusercontent.com/grass-cs/AABkmLfGAti2dzHrQ7E4lrmHlvNHJvno9rn5kuGphaKxJLSaW4Z3jBtTC2hZRB8DJ-1X40tuiaeVHtd0BcAy6WzbjnXQnQe9sNdM2Nslj1gwfekxm7lZQ2xE8qFvtaxDt31nfnuqAUZtWNT0JRHb=s4800-w1024',
+    caption: 'Salão principal da Acrópole Restaurante & Pizzaria no José Menino',
+  },
+  {
+    url: 'https://lh3.googleusercontent.com/grass-cs/AABkmLftr_vRN2AHEPB-6JAfwQT3VMtKKG-gURgUXSlhdoKwrQdJLZg3EXtgUGFmqQJo2TBf3-bHguhv33dCMbHWOmczOoP2JsKWeD7MhANJuANBGvWNtd0s146NwmA7DnaA4Tnf7clvuw=s4800-w1024',
+    caption: 'Ambiente acolhedor preparado para jantares em família e encontros especiais',
+  },
+  {
+    url: 'https://lh3.googleusercontent.com/grass-cs/AABkmLfaQzVqa2MRBSZWBy8ifA2C1gegxaXVOGp04kUqT_rDpQmYDhhS_8GarfgUua8bxBdLiq7RskkJpqHyr3WQtI2_XCVay1fuJY2z956y71aUQ3TRCpuXMMJ99-4FU6fA5RLY90w64lN8NVvM=s4800-w1024',
+    caption: 'Fachada e recepção na Av. Senador Pinheiro Machado, 1008 em Santos',
+  },
+  {
+    url: 'https://lh3.googleusercontent.com/grass-cs/AABkmLcasj_GRcj2X9GQq0nvT65MjJcto-ZYSHbS0Smz0nWeUg9K2bHfC1fnx2E5Vr_1NURPp7Oz6x4Kxo9xAlwY4NZwsf4Lp-kdR3UYuAgKN9T7huIpEVKGG_OTxnlvEGTx4YDaOy09pBejziYY=s4800-w1024',
+    caption: 'Atendimento e preparo artesanal da nossa cozinha e pizzaria',
+  },
+];
+
+export const INITIAL_MENU_ITEMS: MenuItem[] = [
+  {
+    id: 'menu-1',
+    category: 'Pizzas Especiais',
+    name: 'Pepperoni Acrópole',
+    description:
+      'Massa de fermentação lenta, molho de tomate pelati italiano, muçarela derretida, fatias generosas de pepperoni levemente picante e folhas de manjericão fresco.',
+    price: 79.9,
+    photoUrl: '/src/assets/images/pizza_pepperoni_artesanal_1794852433336.jpg',
+    active: true,
+    sortOrder: 1,
+  },
+  {
+    id: 'menu-2',
+    category: 'Pizzas Tradicionais',
+    name: 'Margherita Clássica',
+    description:
+      'Molho artesanal de tomates maduros, muçarela especial, rodelas de tomate fresco, manjericão selecionado e fio de azeite extravirgem.',
+    price: 68.0,
+    photoUrl: '/src/assets/images/pizza_margherita_napolitana_1794852433831.jpg',
+    active: true,
+    sortOrder: 2,
+  },
+  {
+    id: 'menu-3',
+    category: 'Pizzas Tradicionais',
+    name: 'Calabresa Artesanal',
+    description:
+      'Massa crocante na borda e macia no centro, calabresa fatiada curada, cebola roxa em pétalas finas, azeitonas pretas e orégano fresco.',
+    price: 69.9,
+    photoUrl: '/src/assets/images/pizza_pepperoni_artesanal_1794852433336.jpg',
+    active: true,
+    sortOrder: 3,
+  },
+  {
+    id: 'menu-4',
+    category: 'Pizzas Especiais',
+    name: 'Quatro Queijos da Casa',
+    description:
+      'Combinação equilibrada de muçarela, provolone defumado, gorgonzola cremoso e parmesão ralado na hora sobre molho de tomate da casa.',
+    price: 76.5,
+    photoUrl: '/src/assets/images/pizza_margherita_napolitana_1794852433831.jpg',
+    active: true,
+    sortOrder: 4,
+  },
+  {
+    id: 'menu-5',
+    category: 'Pizzas Especiais',
+    name: 'Portuguesa Completa',
+    description:
+      'Muçarela, presunto cozido de primeira, ovos cozidos, ervilhas frescas, cebola em rodelas, pimentão e azeitonas selecionadas.',
+    price: 74.9,
+    photoUrl: '/src/assets/images/pizza_margherita_napolitana_1794852433831.jpg',
+    active: true,
+    sortOrder: 5,
+  },
+  {
+    id: 'menu-6',
+    category: 'Massas & Pratos',
+    name: 'Pappardelle ao Ragù de Carne',
+    description:
+      'Massa fresca artesanal servida com ragù de carne cozido lentamente em vinho tinto e ervas aromáticas, finalizado com lascas de parmesão.',
+    price: 64.0,
+    photoUrl: '/src/assets/images/massa_artesanal_ragu_1794852434004.jpg',
+    active: true,
+    sortOrder: 6,
+  },
+  {
+    id: 'menu-7',
+    category: 'Massas & Pratos',
+    name: 'Lasagna à Bolonhesa Tradicional',
+    description:
+      'Camadas delicadas de massa fresca intercaladas com molho bolonhesa artesanal, bechamel aveludado e gratinado dourado de parmesão.',
+    price: 62.0,
+    photoUrl: '/src/assets/images/massa_artesanal_ragu_1794852434004.jpg',
+    active: true,
+    sortOrder: 7,
+  },
+  {
+    id: 'menu-8',
+    category: 'Sobremesas & Bebidas',
+    name: 'Tiramisù Clássico da Acrópole',
+    description:
+      'Biscoitos embebidos em café espresso, creme leve de mascarpone e finalização generosa com cacau amargo em pó.',
+    price: 29.9,
+    photoUrl: '/src/assets/images/tiramisu_italiano_classico_1794852436083.jpg',
+    active: true,
+    sortOrder: 8,
+  },
+];
+
+export const INITIAL_GALLERY_PHOTOS: GalleryPhoto[] = REAL_ESTABLISHMENT_PHOTOS.map(
+  (photo, index) => ({
+    id: `gallery-${index + 1}`,
+    imageUrl: photo.url,
+    caption: photo.caption,
+    displayOrder: index + 1,
+  })
+);
+
+export const INITIAL_TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'test-1',
+    customerName: 'Mariana Costa',
+    content:
+      'A massa da pizza de pepperoni tem uma textura leve e crocante que não pesa nada. O salão no José Menino é super aconchegante para ir com a família.',
+    rating: 5,
+    status: 'aprovado',
+    createdAt: '2026-10-18T21:15:00.000Z',
+  },
+  {
+    id: 'test-2',
+    customerName: 'Ricardo Almeida',
+    content:
+      'Frequento a Acrópole há anos e o padrão continua impecável. Atendimento atencioso, pizzas sempre quentinhas e o pappardelle ao ragù surpreende muito.',
+    rating: 5,
+    status: 'aprovado',
+    createdAt: '2026-10-25T20:40:00.000Z',
+  },
+  {
+    id: 'test-3',
+    customerName: 'Fernanda Siqueira',
+    content:
+      'Reservamos mesa para comemorar aniversário em 10 pessoas e fomos muito bem recebidos. Tiramisù maravilhoso para fechar a noite em Santos.',
+    rating: 5,
+    status: 'aprovado',
+    createdAt: '2026-11-04T22:10:00.000Z',
+  },
+];
+
+export const INITIAL_FAQS: FaqItem[] = [
+  {
+    id: 'faq-1',
+    question: 'Como funciona a reserva de mesas para grupos e comemorações?',
+    answer:
+      'Você pode solicitar sua reserva diretamente pelo formulário desta página escolhendo data, horário e número de convidados, ou confirmar pelo nosso WhatsApp (13) 3237-3609. Para grupos acima de 8 pessoas, recomendamos agendar com pelo menos 24 horas de antecedência.',
+    displayOrder: 1,
+  },
+  {
+    id: 'faq-2',
+    question: 'Vocês oferecem opções vegetarianas no cardápio?',
+    answer:
+      'Sim. Além da Margherita Clássica e da Quatro Queijos da Casa, preparamos combinações vegetarianas sob medida com vegetais frescos e queijos selecionados. Basta informar sua preferência ao garçom ou no campo de observações da reserva.',
+    displayOrder: 2,
+  },
+  {
+    id: 'faq-3',
+    question: 'É possível pedir para retirada no balcão ou delivery na região?',
+    answer:
+      'Sim! Atendemos pedidos para retirada diretamente no balcão na Av. Senador Pinheiro Machado, 1008 e entregas em Santos através do telefone e WhatsApp (13) 3237-3609.',
+    displayOrder: 3,
+  },
+  {
+    id: 'faq-4',
+    question: 'Quais formas de pagamento são aceitas?',
+    answer:
+      'Aceitamos cartões de crédito e débito das principais bandeiras, Pix, vale-refeição presencial e pagamento em dinheiro.',
+    displayOrder: 4,
+  },
+  {
+    id: 'faq-5',
+    question: 'Onde fica a Acrópole Restaurante & Pizzaria e há facilidade de acesso?',
+    answer:
+      'Estamos localizados na Av. Senador Pinheiro Machado, 1008, no bairro José Menino, em Santos - SP (CEP 11065-605), uma das principais avenidas da cidade, com acesso fácil tanto pela orla quanto pelos canais.',
+    displayOrder: 5,
+  },
+];
+
+export const INITIAL_BOOKINGS: Booking[] = [];
+export const INITIAL_CONTACT_MESSAGES: ContactMessage[] = [];

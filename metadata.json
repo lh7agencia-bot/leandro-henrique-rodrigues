@@ -1,0 +1,6 @@
+{
+  "name": "Acrópole Restaurante & Pizzaria",
+  "description": "Massa perfeita, sabor inesquecível — Pizzaria e restaurante em Santos, SP. Cardápio digital, galeria, reservas online e painel administrativo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
